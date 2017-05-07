@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Menu de pesquisas - SigCel </title>
+<link href="css/estilo_pesquisa.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js" type="text/javascript"></script>    
+<script>
+	$(document).ready(function(e) {
+        $("#pesquisas").click(function(e){
+            $("#lista_pesquisas").show();
+        })
+        
+        $("#pesqReal").click(function(e){
+            $("#lista_pesquisas").show();
+        })
+      
+        $("#outros").click(function(e){
+            $("#lista_pesquisas").hide();
+        })
+		
+		$("#logout").click(function (e){
+			window.location = "index.html";	
+		})	
+		
+        $(".pesq").click(function(e){
+            window.location = "PesquisaSelecionada.html";
+        })
+        
+        $("#outros").click(function(e){
+            window.location = "NovaPesquisa.html";
+        })
+		$("#lista_pesquisas").load("php/selPesquisa.php");
+		$("#user_logado").load("php/sessao.php");
+		      
+    });
+</script>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+</head>
+
+<body>
+<div id="barraUsuario"><b>Online:</b> <span id="user_logado"></span>
+	<div id="logout"><b>Logout </b>
+        <div id="imgLogout"><img src="imgs/ico_logout.png"></div>
+    </div>
+</div>
+    
+<div id="boxCentral">
+    <div id="boxTitulo">Pesquisas</div>
+        <div id="boxTitulos">    
+            <div id="pesquisas"><a href="#pesquisas"></a><br>Pesquisas</br></div>
+            <div id="pesqReal"><a href="#pesqReal"></a><br>Pesquisas Realizadas</br></div>
+            <div id="outros"><a href="#outros"></a><br>Nova Pesquisa</br></div>
+        </div>
+
+    <div id="lista_pesquisas">
+<!--        <div class="pesq" id="pesq1"><b>Pesquisa Gonzaga</b> - Data: (dd/mm/aa)</div>
+        <div class="pesq" id="pesq2"><b>Pesquisa Marapé</b>- Data: (dd/mm/aa)</div>
+        <div class="pesq" id="pesq3"><b>Pesquisa Boqueirão</b> - Data: (dd/mm/aa)</div>
+        <div class="pesq" id="pesq4"><b>Pesquisa Canal 1</b> - Data: (dd/mm/aa)</div>
+        <div class="pesq" id="pesq5"><b>Pesquisa Zona Noroeste</b> - Data: (dd/mm/aa)</div>
+        <div class="pesq" id="pesq6"><b>Pesquisa Ponta da praia</b> - Data: (dd/mm/aa)</div>-->
+    </div>
+</div> 
+
+    <div id="clear"></div>
+    <div id="boxBotao">
+        <div id="botaoVoltar"><a href="index.html" class="nounderline"><center>Voltar</center></a></div>
+    </div> 
+
+</body>
+</html>

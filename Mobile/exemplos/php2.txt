@@ -1,0 +1,28 @@
+<?php
+  $login = $_POST["txtLogin"];
+  $senha = $_POST["txtSenha"];
+
+  include_once("conexao.php");
+
+  $comando ="Select * from usuario where nm_login = '" . $login . "' and nm_senha = md5('" . $senha . "')";
+  $cSQL = seleciona($comando);
+  $qtdLinhas = mysql_num_rows($cSQL);
+
+  if ($qtdLinhas!=0)
+  {
+  	$dados = mysql_fetch_array($cSQL);
+   	session_start("login");
+		$_SESSION["logado"] = $login;
+		$_SESSION["nmLogado"] = $dados["nm_usuario"];
+
+		Header("Location:principal.php");
+		desconecta();
+  }
+  else
+  {
+  	desconecta();
+  	Header("Location:index.php?e=1");
+  }
+  
+
+?>

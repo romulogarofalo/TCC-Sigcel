@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9855D491-B230-4A26-A202-94BBFEBEE937}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prj_sigcel</RootNamespace>
+    <AssemblyName>prj_sigcel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL's\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\cls_coisas_genericas.cs" />
+    <Compile Include="Formulários\frm_adicionar_material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_adicionar_material.designer.cs">
+      <DependentUpon>frm_adicionar_material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_cadastro_materiais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_cadastro_materiais.designer.cs">
+      <DependentUpon>frm_cadastro_materiais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_eventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_eventos.Designer.cs">
+      <DependentUpon>frm_eventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_func_selecionados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_func_selecionados.designer.cs">
+      <DependentUpon>frm_func_selecionados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_graficoGrande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_graficoGrande.Designer.cs">
+      <DependentUpon>frm_graficoGrande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_graficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_graficos.Designer.cs">
+      <DependentUpon>frm_graficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_materiais_eventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_materiais_eventos.Designer.cs">
+      <DependentUpon>frm_materiais_eventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Pesquisas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Pesquisas.designer.cs">
+      <DependentUpon>frm_Pesquisas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_principal.Designer.cs">
+      <DependentUpon>frm_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_cadastro_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_cadastro_funcionario.Designer.cs">
+      <DependentUpon>frm_cadastro_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_Calculadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_Calculadora.Designer.cs">
+      <DependentUpon>frm_Calculadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_calendario.Designer.cs">
+      <DependentUpon>frm_calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_selecionar_func.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_selecionar_func.designer.cs">
+      <DependentUpon>frm_selecionar_func.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frm_adicionar_material.resx">
+      <DependentUpon>frm_adicionar_material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_cadastro_funcionario.resx">
+      <DependentUpon>frm_cadastro_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_cadastro_materiais.resx">
+      <DependentUpon>frm_cadastro_materiais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_eventos.resx">
+      <DependentUpon>frm_eventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_func_selecionados.resx">
+      <DependentUpon>frm_func_selecionados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_graficoGrande.resx">
+      <DependentUpon>frm_graficoGrande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_graficos.resx">
+      <DependentUpon>frm_graficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_materiais_eventos.resx">
+      <DependentUpon>frm_materiais_eventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Pesquisas.resx">
+      <DependentUpon>frm_Pesquisas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_principal.resx">
+      <DependentUpon>frm_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_Calculadora.resx">
+      <DependentUpon>frm_Calculadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_calendario.resx">
+      <DependentUpon>frm_calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_selecionar_func.resx">
+      <DependentUpon>frm_selecionar_func.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_opçoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plano_FrmSenha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pendrive1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configurações1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendário1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculadora1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_opçoes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degradê_login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 3 branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degradê_login1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_status_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_status_login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_encerra_prog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL%27s\MySql.Data.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

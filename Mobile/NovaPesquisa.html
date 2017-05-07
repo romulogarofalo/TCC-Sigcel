@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pesquisa Selecionada - SigCel</title>
+<link href="css/estilo_novaPesq.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery.js" type="text/javascript"></script>
+    
+<script>
+	$(document).ready(function(e) {
+        $("#botaoVoltar").click(function(e){
+            window.location = "pesquisas.html";
+        })
+        
+        $("#logout").click(function (e){
+			window.location = "index.html";	
+		})
+		$("#user_logado").load("php/sessao.php");
+        
+        });
+</script>
+        
+</head>
+<body>
+
+<div id="barraUsuario"><b>Online:</b> <span id="user_logado"></span>
+	<div id="logout"><b>Logout </b>
+        <div id="imgLogout"><img src="imgs/ico_logout.png"></div>
+    </div>
+</div>
+<div id="TituloNovaPesq">Dados da nova pesquisa</div>
+<div class="dados" id="dados1"><b>Título da pesquisa</b><br>
+            <input type="text" name="txtRenda" class="txtDados" value=''><br>
+    <b>Data:</b><br>
+    <input type="date" name="dataPesq" class="combobox">
+</div>
+    
+<div id="TituloQuestoes">Questões e alternativas</div>
+    
+    <div id="lista_pgts">
+    <div class="pgts" id="pgt1"><br><b>1 - <input type="text" name="txtPgt1" class="txtPgts"></b><br>
+        <br><b>R:</b> <input type="text" name="txtResp1" class="txtPgts">
+        </div>
+    </div>
+        
+    <div id="clear"></div>
+    <div id="boxBotao">
+        <div id="botaoVoltar" class="nounderline"><center>Voltar</center></div>
+    </div>        

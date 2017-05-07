@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pesquisa Selecionada - SigCel</title>
+<link href="css/estilo_pesqSelecionada.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js" type="text/javascript"></script>
+    
+<script>
+	$(document).ready(function(e) {
+        $("#botaoVoltar").click(function(e){
+            window.location = "pesquisas.html";
+        })
+        
+        $("#logout").click(function (e){
+			window.location = "index.html";	
+            $("#lista_pesquisas").show();
+		})
+        
+        });
+</script>
+        
+        <script language='JavaScript'>
+        
+        function SomenteNumero(e)
+        {
+            var tecla=(window.event)?event.keyCode:e.which;   
+            if((tecla>47 && tecla<58)) return true;
+            else
+            {
+    	       if (tecla==8 || tecla==0) return true;
+	           else  return false;
+            }
+        }
+        </script>
+</head>
+<body>
+
+<div id="barraUsuario"><b>Online:</b> Exemplo da silva
+	<div id="logout"><b>Logout </b>
+        <div id="imgLogout"><img src="imgs/ico_logout.png"></div>
+    </div>
+</div>
+<div id="boxDadosPessoais">Dados pessoais</div>
+    <div class="dados" id="dados1"><b>Renda mensal por residência:</b><br>
+        <input type="text" name="txtRenda" class="txtDados" maxlength="10" value='' onkeypress='return SomenteNumero(event)'><br>
+        <b>Escolaridade (Formação):</b><br>
+        <select size="1" name="D1" class="combobox">
+            <option selected value="Selecione">Selecione uma opção</option>
+            <option value="cb1">Não sabe ler/escrever</option>
+            <option value="cb2">Ensino Fundamental incompleto</option>
+            <option value="cb3">Ensino Fundamental completo</option>
+            <option value="cb4">Ensino Médio incompleto</option>
+            <option value="cb5">Ensino Médio completo</option>
+            <option value="cb6">Ensino Superior incompleto</option>
+            <option value="cb7">Ensino Superior completo</option>
+            <option value="cb8">Pós-Graduação</option>
+        </select><br>
+        <b>Idade:</b><br>
+        <input type="text" name="txtIdade" class="txtDados" size="10" maxlength="3" onkeypress='return SomenteNumero(event)'><br>
+        <b>Sexo:</b><br>
+        <input type="radio" name="rbSexo"  class="check-1">Masculino
+        <input type="radio" name="rbSexo"  class="check-1">Feminino
+    </div>
+    
+    
+<div id="boxTitulo">PESQUISA SELECIONADA</div>
+<div id="lista_pgts">
+    <div class="pgts" id="pgt1"><b>1 - Qual sua opinião sobre a segurança?</b><br>
+        <input type="radio" name="radiobutton1" class="check-1">boa
+        <input type="radio" name="radiobutton1" class="check-1">regular
+        <input type="radio" name="radiobutton1" class="check-1">ruim    
+    </div>
+    <div class="pgts" id="pgt2"><b>2 - Acha que um vereador delegado faria melhorar a segurança?</b><br>
+        <input type="radio" name="radiobutton2" class="check-1"> Sim
+        <input type="radio" name="radiobutton2" class="check-1"> Não
+        <input type="radio" name="radiobutton2" class="check-1"> Talvez
+    </div>
+    <div class="pgts" id="pgt3"><b>3 - O que você acha do saneamento no bairro?</b><br>
+        <input type="radio" name="radiobutton3" class="check-1"> bom
+        <input type="radio" name="radiobutton3" class="check-1"> regular
+        <input type="radio" name="radiobutton3" class="check-1"> ruim    
+    </div>
+    <div class="pgts" id="pgt4"><b>4 - Acha que um vereador delegado faria melhorar a segurança?</b><br>
+        <input type="radio" name="radiobutton4" class="check-1"> Sim
+        <input type="radio" name="radiobutton4" class="check-1"> Não
+        <input type="radio" name="radiobutton4" class="check-1"> Talvez
+    </div>
+    <div class="pgts" id="pgt5"><b>5 - Qual sua opinião sobre a segurança?</b><br>
+        <input type="radio" name="radiobutton5" class="check-1"> boa
+        <input type="radio" name="radiobutton5" class="check-1"> regular
+        <input type="radio" name="radiobutton5" class="check-1"> ruim    
+    </div>
+    <div class="pgts" id="pgt6"><b>6 - Acha que um vereador delegado faria melhorar a segurança?</b><br>
+        <input type="radio" name="radiobutton6" class="check-1"> Sim
+        <input type="radio" name="radiobutton6" class="check-1"> Não
+        <input type="radio" name="radiobutton6" class="check-1"> Talvez
+    </div>
+</div>
+    
+<div id="clear"></div>
+<div id="boxBotaoSalvar">
+    <div id="botaoSalvar"><center>Concluir Pesquisa</center></div>
+</div><br>    
+<div id="boxBotao">
+    <div id="botaoVoltar"><center>Voltar</center></div>
+</div> 
+
+</body>
+</html>

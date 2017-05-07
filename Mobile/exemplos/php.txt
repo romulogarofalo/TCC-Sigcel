@@ -1,0 +1,9 @@
+$qtdLinhas = mysql_num_rows($cSQL);
+if ($qtdLinhas!=0)
+{
+	$linha = 0;
+	while($dados = mysql_fetch_array($cSQL))
+	{ 
+		echo  $dados[1] . "<br>";
+	}
+}
